@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Reporter Login",
+    "status": "PASS",
+    "details": "Logged in and redirected to /reporter/incidents",
+    "screenshot": ""
+  },
+  {
+    "name": "Reporter Report Fire with 2 Photos",
+    "status": "PASS",
+    "details": "Incident #132 created in Pending status with 2 photos attached",
+    "screenshot": "D:\\SafeRout-2\\SafeRouteFrontend\\e2e\\screenshots\\01-reporter-pending.png"
+  },
+  {
+    "name": "Admin Login",
+    "status": "PASS",
+    "details": "Logged in and redirected to /admin",
+    "screenshot": ""
+  },
+  {
+    "name": "Admin Verify Incident",
+    "status": "PASS",
+    "details": "Incident #132 status changed to Verified",
+    "screenshot": ""
+  },
+  {
+    "name": "Admin Assign Fire Responder",
+    "status": "PASS",
+    "details": "Assigned Demo Fire responder with proximity sorting",
+    "screenshot": "D:\\SafeRout-2\\SafeRouteFrontend\\e2e\\screenshots\\02-admin-assigned.png"
+  },
+  {
+    "name": "Responder Login",
+    "status": "PASS",
+    "details": "Logged in and redirected to /responder",
+    "screenshot": ""
+  },
+  {
+    "name": "Google Maps URL Check",
+    "status": "PASS",
+    "details": "URL: https://www.google.com/maps/dir/?api=1&destination=12.9716,77.5946&travelmode=driving",
+    "screenshot": ""
+  },
+  {
+    "name": "Responder Accept Assignment",
+    "status": "PASS",
+    "details": "Assignment #69 Accepted",
+    "screenshot": ""
+  },
+  {
+    "name": "Responder Start Travel",
+    "status": "PASS",
+    "details": "Status transitioned to On the way",
+    "screenshot": ""
+  },
+  {
+    "name": "Reporter Live Tracking",
+    "status": "PASS",
+    "details": "Reporter page shows responder live tracking status",
+    "screenshot": "D:\\SafeRout-2\\SafeRouteFrontend\\e2e\\screenshots\\03-reporter-responder-en-route.png"
+  },
+  {
+    "name": "Responder Arrived",
+    "status": "PASS",
+    "details": "Status transitioned to Reached",
+    "screenshot": ""
+  },
+  {
+    "name": "Responder Resolve Incident",
+    "status": "PASS",
+    "details": "Incident successfully resolved with notes",
+    "screenshot": "D:\\SafeRout-2\\SafeRouteFrontend\\e2e\\screenshots\\04-responder-resolved.png"
+  },
+  {
+    "name": "Reporter Final Timeline",
+    "status": "PASS",
+    "details": "Reporter sees complete resolution timeline",
+    "screenshot": "D:\\SafeRout-2\\SafeRouteFrontend\\e2e\\screenshots\\05-reporter-timeline-resolved.png"
+  },
+  {
+    "name": "Reporter Notifications",
+    "status": "PASS",
+    "details": "Received incident resolution notification",
+    "screenshot": ""
+  },
+  {
+    "name": "Admin Dashboard Sync",
+    "status": "PASS",
+    "details": "Admin dashboard reflects current system state",
+    "screenshot": ""
+  },
+  {
+    "name": "Alternate 6a: Cancel Pending Report",
+    "status": "PASS",
+    "details": "Incident #133 cancelled by reporter",
+    "screenshot": ""
+  },
+  {
+    "name": "Alternate 6b: Edit & Delete Pending Report",
+    "status": "PASS",
+    "details": "Incident #134 successfully edited and deleted",
+    "screenshot": ""
+  },
+  {
+    "name": "Alternate 6c: Admin Reject with Reason",
+    "status": "PASS",
+    "details": "Incident #135 rejected with reason shown to reporter",
+    "screenshot": ""
+  },
+  {
+    "name": "Alternate 6d: Responder Reject & Admin Reassign",
+    "status": "PASS",
+    "details": "Incident #136 successfully rejected by unit and reassigned by admin",
+    "screenshot": ""
+  },
+  {
+    "name": "Alternate 6e: Admin Disable User",
+    "status": "PASS",
+    "details": "User disabled-test-1792696960064@example.com disabled; login blocked with deactivation notice",
+    "screenshot": ""
+  },
+  {
+    "name": "Session: Edit Profile No 401 Loop",
+    "status": "PASS",
+    "details": "Profile updated; silent token refresh preserved active session",
+    "screenshot": ""
+  },
+  {
+    "name": "Session: Page Reload Restored",
+    "status": "PASS",
+    "details": "Authenticated session restored on reload from storage",
+    "screenshot": ""
+  },
+  {
+    "name": "Session: Logout & Route Guard",
+    "status": "PASS",
+    "details": "Logout clears tokens and protected route redirects to /login",
+    "screenshot": ""
+  }
+]

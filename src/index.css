@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-page text-ink font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-300 ring-offset-2;
+  }
+
+  /*
+   * Leaflet Stacking Context Isolation:
+   * Leaflet defaults set internal panes to z-index 200-700 and controls to 800-1000.
+   * By setting position: relative, z-index: 0, and isolation: isolate on the container,
+   * all map layers, markers, popups, and zoom buttons are strictly contained within
+   * their own local stacking context and never bleed over headers (z-30),
+   * bottom navs (z-30), drawers, dropdowns (z-50), or modals (z-50).
+   */
+  .leaflet-container {
+    font-family: inherit;
+    position: relative;
+    z-index: 0 !important;
+    isolation: isolate;
+  }
+
+  .leaflet-pane {
+    z-index: 10 !important;
+  }
+
+  .leaflet-tile-pane {
+    z-index: 10 !important;
+  }
+
+  .leaflet-overlay-pane {
+    z-index: 20 !important;
+  }
+
+  .leaflet-shadow-pane {
+    z-index: 30 !important;
+  }
+
+  .leaflet-marker-pane {
+    z-index: 40 !important;
+  }
+
+  .leaflet-tooltip-pane {
+    z-index: 50 !important;
+  }
+
+  .leaflet-popup-pane {
+    z-index: 60 !important;
+  }
+
+  .leaflet-top,
+  .leaflet-bottom {
+    position: absolute;
+    z-index: 70 !important;
+    pointer-events: none;
+  }
+
+  .leaflet-control {
+    z-index: 70 !important;
+    pointer-events: auto;
+  }
+}
+
+@keyframes marker-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-marker-pulse {
+  animation: marker-pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Custom sleek scrollbar for scrollable modals and panels */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
